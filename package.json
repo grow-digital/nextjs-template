@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
@@ -27,6 +27,7 @@
     "npm": "please-use-yarn"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "prettier": "^2.8.4"
   }
 }
