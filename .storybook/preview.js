@@ -1,4 +1,12 @@
-import '../src/styles/globals.css';
+import * as NextImage from 'next/image';
+import '../src/styles/globals.scss';
+
+const OriginalNextImage = NextImage.default;
+
+Object.defineProperty(NextImage, 'default', {
+  configurable: true,
+  value: (props) => <OriginalNextImage {...props} unoptimized />,
+});
 
 const BREAKPOINTS_INT = {
   xs: 375,
